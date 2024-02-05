@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "api-vps"
+version = "0.1.0"
+description = ""
+authors = ["RWallan <3am.richardwallan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+fastapi = "^0.109.2"
+uvicorn = {extras = ["standard"], version = "^0.27.0.post1"}
+
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.12.2"
+black = "^24.1.1"
+isort = "^5.13.2"
+ruff = "^0.2.0"
+pytest = "^8.0.0"
+httpx = "^0.26.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+line_length = 79
+profile = "black"
+
+[tool.ruff]
+line-length = 79
+
+[tool.pytest.ini_options]
+pythonpath = "."
+
+[tool.taskipy.tasks]
+lint = "ruff . && black --check . --diff && isort --diff ."
+format = "black . && isort ."
+run = "api_vps.app:app --reload"
+pre_test = "task lint"
+test = "pytest -s -x -vv"

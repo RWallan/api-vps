@@ -2,7 +2,6 @@ from enum import Enum
 from typing import Any
 
 import httpx
-from pydantic import HttpUrl
 from pydantic.dataclasses import dataclass
 
 
@@ -20,8 +19,8 @@ class HttpMethods(Enum):
 
 
 class HttpRequester:
-    def __init__(self, domain: HttpUrl) -> None:
-        self.domain = domain
+    def __init__(self, domain: str) -> None:
+        self.__domain = domain
         self.__create_async_methods()
 
     async def fetch(
@@ -36,7 +35,7 @@ class HttpRequester:
         )
 
     def __create_async_methods(self):
-        self._client = httpx.AsyncClient(base_url=self.domain)
+        self._client = httpx.AsyncClient(base_url=self.__domain)
 
         self.methods = {
             "post": self._client.post,

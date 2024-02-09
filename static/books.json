@@ -1,0 +1,47 @@
+[
+    {
+        "titulo": "Estatística Básica",
+        "autor": "Pedro A. Morettin e Wilton de O. Bussab",
+        "area": "Estatística",
+        "imagem": "https://example.com/estatistica_basica.jpg",
+        "publisher": "Saraivauni",
+        "ano_publicacao": 2017,
+        "isbn": "978-1234567890"
+    },
+    {
+        "titulo": "Estatística: O que é, para que Serve, como Funciona",
+        "autor": "Desconhecido",
+        "area": "Estatística",
+        "imagem": "https://example.com/estatistica_o_que_e.jpg",
+        "publisher": "Desconhecido",
+        "ano_publicacao": 2024,
+        "isbn": "978-0987654321"
+    },
+    {
+        "titulo": "Estatística Prática Para Cientistas de Dados",
+        "autor": "Andrew Bruce e Peter Bruce",
+        "area": "Ciência de Dados",
+        "imagem": "https://example.com/estatistica_pratica.jpg",
+        "publisher": "Desconhecido",
+        "ano_publicacao": 2019,
+        "isbn": "978-8550806032"
+    },
+    {
+        "titulo": "Introdução à Estatística",
+        "autor": "Desconhecido",
+        "area": "Estatística",
+        "imagem": "https://example.com/introducao_estatistica.jpg",
+        "publisher": "Desconhecido",
+        "ano_publicacao": 2022,
+        "isbn": "978-9876543210"
+    },
+    {
+        "titulo": "Estatística Aplicada a Administração e Economia",
+        "autor": "Desconhecido",
+        "area": "Administração e Economia",
+        "imagem": "https://example.com/estatistica_aplicada.jpg",
+        "publisher": "Desconhecido",
+        "ano_publicacao": 2020,
+        "isbn": "978-5432109876"
+    }
+]

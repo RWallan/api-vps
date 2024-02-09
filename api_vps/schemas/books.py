@@ -1,7 +1,7 @@
 from pydantic import BaseModel, HttpUrl
 
 
-class Books(BaseModel):
+class Book(BaseModel):
     titulo: str
     autor: str
     area: str
@@ -9,3 +9,7 @@ class Books(BaseModel):
     publisher: str
     ano_publicacao: int
     isbn: str
+
+
+class Books(BaseModel):
+    data: list[Book]

@@ -39,6 +39,6 @@ pythonpath = "."
 [tool.taskipy.tasks]
 lint = "ruff . && black --check . --diff && isort --diff ."
 format = "black . && isort ."
-run = "api_vps.app:app --reload"
+run = "uvicorn api_vps.app:app --reload"
 pre_test = "task lint"
 test = "pytest -s -x -vv"

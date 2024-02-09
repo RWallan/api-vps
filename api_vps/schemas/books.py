@@ -1,11 +1,11 @@
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel
 
 
 class Book(BaseModel):
     titulo: str
     autor: str
     area: str
-    imagem: HttpUrl
+    imagem: str
     publisher: str
     ano_publicacao: int
     isbn: str

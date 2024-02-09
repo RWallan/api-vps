@@ -1,14 +1,14 @@
 from enum import Enum
-from typing import Any
 
 import httpx
+from pydantic import JsonValue
 from pydantic.dataclasses import dataclass
 
 
 @dataclass
 class HttpResponse:
     status_code: int
-    json: dict[str, Any]
+    json: JsonValue
 
 
 class HttpMethods(Enum):
